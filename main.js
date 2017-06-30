@@ -7,7 +7,7 @@ import {createStore, applyMiddleware} from 'redux'
 
 import NewCounter from './container/Counter'
 import reducer from './reducer/reducers'
-import {helloSaga} from './saga/sagas'
+import rootSaga from './saga/sagas'
 
 import createSagaMiddleware from 'redux-saga'
 
@@ -17,7 +17,7 @@ const store = createStore(
     reducer,
     applyMiddleware(sagaMiddleware)
 );
-sagaMiddleware.run(helloSaga);
+sagaMiddleware.run(rootSaga);
 
 ReactDOM.render(
     <Provider store={store}>

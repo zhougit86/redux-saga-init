@@ -10,3 +10,7 @@ export const Increase = () => ({
 export const Decrease = () => ({
   type: 'DECREMENT'
 });
+
+export const IncreaseAsync = () => ({
+  type: 'INCREMENT_ASYNC'
+});
